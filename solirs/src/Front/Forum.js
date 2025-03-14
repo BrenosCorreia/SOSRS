@@ -1,4 +1,8 @@
 // Página Fórum
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import "./Styles/Forum.css";
+
 function Forum() {
     const navigate = useNavigate();
     const [topics, setTopics] = useState([
@@ -56,3 +60,5 @@ function Forum() {
       </div>
     );
   }
+
+  export default Forum;

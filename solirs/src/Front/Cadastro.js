@@ -1,4 +1,8 @@
 // Componente de Cadastro
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import "./Styles/Cadastro.css";
+
 function Cadastro() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -138,3 +142,5 @@ function Cadastro() {
       </div>
     );
   }
+
+  export default Cadastro;

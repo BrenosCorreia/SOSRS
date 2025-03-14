@@ -1,0 +1,75 @@
+/* Estilização global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Contêiner da página */
+  .page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Título */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Contêiner do mapa */
+  .map-container {
+    position: relative; /* Importante para o posicionamento do botão */
+    width: 100%;
+    height: 500px; /* Altura fixa para o contêiner do mapa */
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilização do mapa (Leaflet) */
+  .leaflet-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    z-index: 1;
+  }
+  
+  /* Botão no canto superior direito */
+  .voltar-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    z-index: 999; /* Garante que o botão fique acima do mapa */
+  }
+  
+  .voltar-button:hover {
+    background-color: #ff6b81;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .map-container {
+      height: 350px;
+    }
+  
+    .voltar-button {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }

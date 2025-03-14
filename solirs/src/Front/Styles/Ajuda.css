@@ -1,0 +1,93 @@
+/* Estilização global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Botão de voltar */
+  .top-right-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .top-right-button:hover {
+    background-color: darkred;
+  }
+  
+  /* Estilização do mapa */
+  .map-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  /* Estilização das notícias */
+  .news-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .news-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-item a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .news-item a:hover {
+    color: red;
+  }
+  
+  /* Estilização da solicitação de ajuda */
+  .solicitacao-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .solicitacao-container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .solicitacao-container input,
+  .solicitacao-container textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .solicitacao-container button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .solicitacao-container button:hover {
+    background-color: darkred;
+  }
+  

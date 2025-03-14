@@ -1,4 +1,9 @@
 // Página Notícias
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import "./Styles/News.css";
+
 function News() {
     const navigate = useNavigate();
     const [news, setNews] = useState([]);
@@ -51,3 +56,5 @@ function News() {
       </div>
     );
   }
+
+  export default News;

@@ -1,4 +1,8 @@
 // Página Home
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import "./Styles/Home.css";
+
 function Home() {
     const navigate = useNavigate();
   
@@ -23,3 +27,5 @@ function Home() {
       </div>
     );
   }
+
+  export default Home;

@@ -1,4 +1,8 @@
 // Página Solicitação de Ajuda
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import "./Styles/Ajuda.css";
+
 function SolicitacaoAjuda() {
     const navigate = useNavigate();
     const [name, setName] = useState("");
@@ -25,3 +29,5 @@ function SolicitacaoAjuda() {
       </div>
     );
   }
+
+  export default SolicitacaoAjuda;

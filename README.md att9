@@ -1,0 +1,128 @@
+Projeto Solidariedade RS
+
+Este projeto é uma plataforma web completa, desenvolvida para auxiliar a população do Rio Grande do Sul em tempos de crise. O sistema possui um backend em Python com Flask e um frontend em React, permitindo o cadastro de usuários, solicitação de ajuda, fórum de discussão, visualização de notícias e informações sobre abrigos.
+
+Funcionalidades
+- Cadastro e Login de Usuários: Permite que voluntários e pessoas necessitadas se cadastrem e acessem a plataforma.
+- Solicitação de Ajuda: Possibilita que usuários solicitem ajuda, informando suas necessidades e localização.
+- Fórum de Discussão: Espaço para troca de informações e organização de ações entre os usuários.
+- Visualização de Notícias: Exibe notícias relevantes sobre a situação no Rio Grande do Sul.
+- Informações sobre Abrigos: Apresenta uma lista de abrigos disponíveis, com informações de contato e localização.
+- Mapa Interativo: Exibe a localização dos abrigos em um mapa interativo utilizando Leaflet e React Leaflet.
+
+Tecnologias Utilizadas
+Frontend (React)
+- React: Biblioteca principal para construção de interfaces de usuário.
+- React DOM: Integração do React com o DOM.
+- React Router DOM: Gerenciamento de rotas no React.
+- Axios: Biblioteca para requisições HTTP.
+- Leaflet: Biblioteca para mapas interativos.
+- React Leaflet: Integração do Leaflet com React.
+
+Backend (Flask)
+- Python: Linguagem de programação principal.
+- Flask: Framework web para construção do backend.
+- Flask-SQLAlchemy: ORM para interação com o banco de dados SQLite.
+- Flask-CORS: Middleware para habilitar CORS (Cross-Origin Resource Sharing).
+- SQLite: Banco de dados utilizado para armazenar os dados da aplicação.
+
+Dependências Python
+asgiref==3.8.1
+blinker==1.9.0
+click==8.1.8
+colorama==0.4.6
+Django==5.1
+Flask==3.1.0
+flask-cors==5.0.1
+Flask-SQLAlchemy==3.1.1
+greenlet==3.1.1
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.2
+SQLAlchemy==2.0.39
+sqlparse==0.5.1
+typing_extensions==4.12.2
+tzdata==2024.1
+Werkzeug==3.1.3
+Dependências NPM
+react
+react-dom
+react-router-dom
+axios
+leaflet
+react-leaflet
+Configuração do Projeto
+Pré-requisitos
+Python (versão 3.x)
+Node.js e npm
+Git (opcional, para clonar o repositório)
+
+Instalação:
+
+Clone o repositório:
+
+Bash
+git clone https://github.com/dolthub/dolt
+cd [nome do repositório]
+
+Crie um ambiente virtual (recomendado):
+
+Bash
+python -m venv venv
+Ative o ambiente virtual:
+
+No Windows:
+
+Bash
+venv\Scripts\activate
+No macOS/Linux:
+
+Bash
+source venv/bin/activate
+Instale as dependências do backend:
+
+Bash
+pip install -r requirements.txt
+Instale as dependências do frontend:
+
+Bash
+cd solirs/src/front
+npm install
+
+Execução do Projeto
+
+Execute o backend:
+
+Bash
+cd ../Back
+python app.py
+
+Execute o frontend:
+
+Bash
+cd ../front
+npm start
+
+Acesse a aplicação:
+
+O frontend estará disponível em http://localhost:3000.
+O backend estará disponível em http://127.0.0.1:5000.
+
+Contribuição
+
+Contribuições são bem-vindas! Se você deseja contribuir para o projeto, siga estas etapas:
+
+Faça um fork do repositório.
+
+Crie uma branch1 para a sua feature ou correção de bug.   
+
+Faça as alterações necessárias.
+Envie um pull request com uma descrição detalhada das suas alterações.
+
+Contato
+Breno Correia - BrenosCorreia - brenoscorreia@fac.pe.senac.br
+Caio Pinho - CaioPinho22 - caiogpinho20@gmail.com
+
+Participantes:
+Breno Correia
+Caio Pinho

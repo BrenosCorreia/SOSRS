@@ -62,13 +62,14 @@ Instalação:
 Clone o repositório:
 
 Bash
-git clone https://github.com/dolthub/dolt
-cd [nome do repositório]
+https://github.com/BrenosCorreia/SOSRS
+cd SOSRS-MAIN
 
 Crie um ambiente virtual (recomendado):
 
 Bash
 python -m venv venv
+
 Ative o ambiente virtual:
 
 No Windows:
@@ -79,10 +80,12 @@ No macOS/Linux:
 
 Bash
 source venv/bin/activate
+
 Instale as dependências do backend:
 
 Bash
 pip install -r requirements.txt
+
 Instale as dependências do frontend:
 
 Bash

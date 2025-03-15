@@ -1,4 +1,4 @@
-// Componente de Cadastro
+// Versão corrigida do Cadastro.js - importe apenas este código
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Styles/Cadastro.css";
@@ -15,6 +15,7 @@ function Cadastro() {
       cidade: ""
     });
     const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
   
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -24,23 +25,42 @@ function Cadastro() {
       }));
     };
   
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
       e.preventDefault();
+      setIsLoading(true);
+      setError("");
       
       // Validações básicas
       if (formData.password !== formData.confirmPassword) {
         setError("As senhas não conferem!");
+        setIsLoading(false);
         return;
       }
       
-      // Aqui você adicionaria a lógica para salvar o usuário
-      console.log("Usuário cadastrado:", formData);
-      
-      // Mensagem de sucesso
-      alert("Cadastro realizado com sucesso!");
-      
-      // Redirecionar para a página de login
-      navigate("/");
+      try {
+        const response = await fetch('http://localhost:5000/api/cadastro', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok) {
+          // Cadastro bem-sucedido
+          alert("Cadastro realizado com sucesso!");
+          navigate("/"); // Redirecionar para a página de login
+        } else {
+          setError(data.message || "Erro ao cadastrar usuário");
+        }
+      } catch (error) {
+        setError("Erro de conexão com o servidor");
+        console.error("Erro:", error);
+      } finally {
+        setIsLoading(false);
+      }
     };
   
     return (
@@ -135,12 +155,21 @@ function Cadastro() {
           </div>
           
           <div className="form-buttons">
-            <button type="submit">Cadastrar</button>
-            <button type="button" onClick={() => navigate("/")} className="back-button">Voltar para Login</button>
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? "Cadastrando..." : "Cadastrar"}
+            </button>
+            <button 
+              type="button" 
+              onClick={() => navigate("/")} 
+              className="back-button"
+              disabled={isLoading}
+            >
+              Voltar para Login
+            </button>
           </div>
         </form>
       </div>
     );
-  }
+}
 
-  export default Cadastro;
+export default Cadastro;
